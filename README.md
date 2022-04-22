@@ -1,34 +1,9 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## What is this "e-Craft App ✅" about?
+The e-craft app is designed to buy or sell the products and explore the basics of supabase, stripe and nextjs.
 
-## Getting Started
+## Visual Representation
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![signin](https://user-images.githubusercontent.com/43074604/164473675-c3c859c6-c2c3-406a-b30a-74c920b07413.png)
+![signup](https://user-images.githubusercontent.com/43074604/164473691-1192b949-19f5-4a86-aa76-be171ba3d4a9.png)
+![noProduct](https://user-images.githubusercontent.com/43074604/164473745-064d6096-8924-4abd-8ed2-f488ad3d5e4f.png)
+![create](https://user-images.githubusercontent.com/43074604/164473728-b66c85dc-a680-4e9b-8bee-790974c2194d.png)
