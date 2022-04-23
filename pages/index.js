@@ -1,9 +1,19 @@
 import { supabase } from '../utils/supabase';
 import Nav from './components/nav';
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
-export default function Home({ products }) {
-  console.log(supabase.auth.user());
+export default function Home() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  const fetchProducts = async () => {
+    const { data: products } = await supabase.from('products').select('*');
+    setProducts(products);
+  };
 
   return (
     <>
@@ -33,13 +43,3 @@ export default function Home({ products }) {
     </>
   );
 }
-
-export const getStaticProps = async () => {
-  const { data: products } = await supabase.from('products').select('*');
-
-  return {
-    props: {
-      products,
-    },
-  };
-};
