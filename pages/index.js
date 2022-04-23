@@ -12,7 +12,7 @@ export default function Home({ products }) {
         <div className="h-auto text-white bg-gray-800 flex pt-8 grid grid-cols-4 gap-4">
           {products.map(product => (
             <>
-              <div className="mb-5 ml-5">
+              <div className="mb-5 ml-5" key={product.id}>
                 <Image
                   src={product.image}
                   width={250}

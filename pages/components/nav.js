@@ -1,8 +1,36 @@
 import Link from 'next/link';
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import { supabase } from '../../utils/supabase';
 
 const Nav = () => {
-  const user = supabase.auth.user();
+  const [user, setUser] = useState(supabase.auth.user());
+  const router = useRouter();
+  const handleLogOut = async e => {
+    e.preventDefault();
+
+    const { error } = await supabase.auth.signOut();
+
+    if (error) {
+      alert(JSON.stringify(error));
+    } else {
+      router.push('/signin');
+      setUser(null);
+    }
+  };
+  useEffect(() => {
+    const getProfile = () => {
+      const profile = supabase.auth.user();
+
+      if (profile) {
+        setUser(profile);
+      } else {
+        router.push('/signin');
+      }
+    };
+
+    getProfile();
+  }, []);
 
   return (
     <>
@@ -22,9 +50,17 @@ const Nav = () => {
         )}
 
         <div className="ml-auto">
-          <Link href="/signin">
-            <a>Logout</a>
-          </Link>
+          {!user ? (
+            <Link href="/signin">
+              <a>Sign In</a>
+            </Link>
+          ) : (
+            <>
+              <button className="" onClick={handleLogOut}>
+                Log out
+              </button>
+            </>
+          )}
         </div>
       </nav>
     </>

@@ -28,14 +28,14 @@ const MyProducts = () => {
           <div className="h-screen text-white bg-gray-800 grid grid-cols-4 gap-4 pt-8 ">
             {products.map(product => (
               <>
-                <div className="mb-5 ml-5">
+                <div className="mb-5 ml-5" key={product.id}>
                   <Image
                     src={product.image}
                     width={250}
                     height={250}
                     alt="picture"
                   />
-                  <h1 key={product.id}>Product: {product.name}</h1>
+                  <h1>Product: {product.name}</h1>
                   <p>Price: ${product.price}</p>
                   <p>Seller Email: {product.seller_email}</p>
                 </div>
