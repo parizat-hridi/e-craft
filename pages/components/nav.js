@@ -6,6 +6,7 @@ import { supabase } from '../../utils/supabase';
 const Nav = () => {
   const [user, setUser] = useState(supabase.auth.user());
   const router = useRouter();
+
   const handleLogOut = async e => {
     e.preventDefault();
 

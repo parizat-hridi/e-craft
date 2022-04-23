@@ -19,7 +19,7 @@ export default function Home({ products }) {
                   height={250}
                   alt="picture"
                 />
-                <h1 key={product.id}>Product: {product.name}</h1>
+                <h1>Product: {product.name}</h1>
                 <p>Price: ${product.price}</p>
                 <p>Seller Email: {product.seller_email}</p>
                 <button className="mt-2 text-lg text-white font-semibold bg-green-500 py-2 px-2 rounded-md focus:outline-none focus:ring-2">
